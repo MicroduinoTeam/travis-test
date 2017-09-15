@@ -6,7 +6,7 @@ before_install:
 script:
   - build_platform coreesp
   - build_platform core328
-#  - build_platform coreplus644
+  - build_platform coreplus644
 #  - build_platform coreplus1284
 #  - build_platform coreusb
 #  - build_platform corerf

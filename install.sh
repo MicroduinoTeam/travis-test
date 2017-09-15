@@ -34,10 +34,12 @@ mv arduino-1.8.4 $HOME/arduino_ide
 # move this library to the arduino libraries folder
 #ln -s $TRAVIS_BUILD_DIR/libraries/* $HOME/arduino_ide/libraries
 
+#PKJ:有修正
 git clone https://github.com/wasdpkj/Microduino-IDE-Support.git $HOME/IDE
 
 rm -rf $HOME/arduino_ide/libraries
 mkdir -p $HOME/arduino_ide/libraries
+#PKJ:有修正
 mv -f $HOME/IDE/libraries/* $HOME/arduino_ide/libraries
 #mv -f $TRAVIS_BUILD_DIR/libraries $HOME/arduino_ide/libraries
 
@@ -126,6 +128,7 @@ function build_platform()
 
   # loop through results and add them to the array
   #examples=($(find $PWD -name "*.pde" -o -name "*.ino"))
+#PKJ:有修正
   examples=($(find $TRAVIS_BUILD_DIR/programs -name "*.ino"))
 
   # get the last example in the array
